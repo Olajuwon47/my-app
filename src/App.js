@@ -39,7 +39,7 @@ const [isSignedIn, setIsSignedIn] = useState(false);
 
 }, []);
 const returnClarifaiRequestOptions =(imageUrl) =>{
-  const USER_ID = 'olajuwon';
+ const USER_ID = 'olajuwon';
 // Your PAT (Personal Access Token) can be found in the Account's Security section
 const PAT = '8a56ebb4735c41ee860174ba7261ebc4';
 const APP_ID = 'face-detection';
@@ -86,7 +86,7 @@ const calculateFaceLocation=(data) => {
   }
 }
  const displayFaceBox = (box) => {
- // console.log(box)
+  console.log(box)
   setBOX({box: box});
 };
  const onRouteChange = (newRoute) => {
@@ -222,12 +222,6 @@ const calculateFaceLocation=(data) => {
     }),
     [],
   );
-/*lightTheme = () => {
-  containerRef.current?.loadTheme("light");
-},
-darkTheme = () => {
-  containerRef.current?.loadTheme("dark");
-}*/
 const OnInputChange=(event) =>{
 setInputValue(event.target.value);
 setImageUrl(event.target.value);
@@ -263,12 +257,6 @@ const onButtonSubmit= () => {
   return (
     
     <div className="App">
-     {/* <button className="theme-btn" onClick={lightTheme}>
-                    Light
-                </button>
-                <button className="theme-btn" onClick={darkTheme}>
-                    Dark
-              </button>*/}
                  { init &&
                 <Particles
                       id="tsparticles"
